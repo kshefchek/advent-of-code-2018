@@ -20,13 +20,15 @@ checksum_test_cases = [
 @pytest.mark.parametrize("box_ids, expected_checksum", checksum_test_cases)
 def test_checksum(box_ids, expected_checksum):
     """
-    Test reranking by adjusting ties
-    function: phenom.utils.simulate.rerank_by_average
+    test puzzle_2.inventory_manager.checksum_ids
     """
     assert checksum_ids(box_ids) == expected_checksum
 
 
 def test_pairwise_alignment():
+    """
+    test puzzle_2.inventory_manager.pairwise_alignment
+    """
     expected_distance = 1
     expected_alignment = 'fg*ij'
     distance, alignment = pairwise_alignment('fghij', 'fguij')

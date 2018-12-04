@@ -12,7 +12,7 @@ parser.add_argument('--input', '-i', type=str, required=False,
 args = parser.parse_args()
 
 # 1 - get checksum to make sure we have all box ids
-aoc_in = open("/home/kshefchek/aoc_input_2.txt")
+aoc_in = open(args.input, 'r')
 box_ids = [line.rstrip() for line in aoc_in.readlines() if line.rstrip() != '']
 print("Checksum for box ids: {}".format(checksum_ids(box_ids)))
 

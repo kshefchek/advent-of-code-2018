@@ -19,8 +19,7 @@ frequency_test_cases = [
 @pytest.mark.parametrize("input_deltas, expected_frequency", frequency_test_cases)
 def test_get_frequency(input_deltas, expected_frequency):
     """
-    Test reranking by adjusting ties
-    function: phenom.utils.simulate.rerank_by_average
+    Test puzzle_1.chronal_calibration.get_frequency
     """
     ending_frequency = 0
     for freq in get_frequency(input_deltas, iterations=1):
@@ -51,8 +50,7 @@ repeated_frequency_cases = [
 @pytest.mark.parametrize("input_deltas, expected_frequency", repeated_frequency_cases)
 def test_get_first_repeat(input_deltas, expected_frequency):
     """
-    Test reranking by adjusting ties
-    function: phenom.utils.simulate.rerank_by_average
+    test puzzle_1.chronal_calibration.first_repeated_frequency
     """
     repeat_freq = first_repeated_frequency(input_deltas, max_iterations=200)
     assert repeat_freq == expected_frequency
